@@ -16,9 +16,7 @@ public class UserDaoHibernateImpl implements UserDao {
     private final static String CREATE_USER_TABLE_QUERY = "CREATE TABLE IF NOT EXISTS user(id BIGINT primary key" +
             " auto_increment, name varchar(100),  lastName varchar(100), age int)";
     private final static String DROP_USER_TABLE_QUERY = "DROP TABLE IF EXISTS user";
-    private final static String ADD_NEW_USER_QUERY = "INSERT INTO user (name, lastName, age) VALUES (?, ?, ?)";
     private final static String CLEAN_TABLE_USER_QUERY = "TRUNCATE user";
-    private final static String DELETE_USER_USER_BY_ID_QUERY = "DELETE FROM user WHERE id=(?)";
     private final static String GET_ALL_USERS_QUERY = "SELECT * FROM user";
 
     public UserDaoHibernateImpl() {
